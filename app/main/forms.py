@@ -1,10 +1,15 @@
 from flask_wtf import FlaskForm
 from wtforms import (StringField, TextAreaField,SubmitField, SelectField,FileField)
-from wtforms.validators import DataRequired,FileRequired
+from wtforms.validators import DataRequired
+
+
+class UpdateProfile(FlaskForm):
+    bio = TextAreaField('Tell us about you.',validators = [DataRequired()])
+    submit = SubmitField('Submit')
 
 class PostForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
-    image = FileField( 'Picture',validators=[FileRequired()])
+    # image = FileField( 'Picture',validators=[FileRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
     submit = SubmitField('Post')
 
