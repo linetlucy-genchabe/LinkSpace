@@ -28,33 +28,31 @@
 
 #col1 img {
     width: 100%;
-}
 
-#col2 {
-    /* flex-basis: 50%; */
-    margin: auto;
-    padding-right: 40px;
-    padding: 10px;
-}
+ }
+ #col2{
+     /* flex-basis: 50%; */
+     margin: auto;
+     padding-right: 40px;
+     padding: 10px;
+ 
+ }
+ #col2 h3{
+     font-size: 50px;
+     font-weight: bolder;
+ }
+ .btns .btn{
+     background-color: rgb(85, 85, 220);
+     color: white;
+     font-weight: bolder;
+     margin-top: 5%;
+ }
+ .btns .btn:hover{
+ background-color: aliceblue;
+ color: rgb(0, 0, 0);
+ }
+ #col2 p{
 
-#col2 h3 {
-    font-size: 50px;
-    font-weight: bolder;
-}
-
-.btns .btn {
-    background-color: rgb(85, 85, 220);
-    color: white;
-    font-weight: bolder;
-    margin-top: 10%;
-}
-
-.btns .btn:hover {
-    background-color: aliceblue;
-    color: rgb(0, 0, 0);
-}
-
-#col2 p {
     font-size: 25px;
     margin-top: 10%;
 }
@@ -89,4 +87,35 @@
 .services h2 {
     font-size: 30px;
     font-weight: bolder;
+}
+#for-img img{
+width: 100%;
+}
+#for-img{
+    /* background-color: rgb(119, 109, 229); */
+}
+#email{
+    flex-basis: 50%;
+    margin: auto;
+}
+#email h3{
+    font-size: 26px;
+    font-weight: bolder;
+}
+#email p{
+    font-size: 18px;
+}
+#subs{
+    font-size: 18px;
+}
+#carded img{
+    width: 100%;
+    background-color: black;
+}
+#textcard p{
+    font-size: 22px;
+}
+#for-footer small{
+    font-size: 15px;
+    font-weight: 600;
 }

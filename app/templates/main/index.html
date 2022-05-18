@@ -21,7 +21,7 @@
             <p>Linkspace is a web application for designers and developers. It allows them to upload their designs and get feedback from other users in the linkspace community.</p>
             <div class="btns">
                 <a href="#about-header">
-                    <button type="button" class="btn btn-danger btn-lg" id="">Join Us Today!</button>
+                    <button type="button" class="btn btn-lg" id="">Join Us Today!</button>
                 </a>
 
                 <div class="display">{{macro.display(posts)}}</div>
@@ -107,16 +107,40 @@
     </div>
 
 </div>
-<section class="contact" id="contacts">
 
-    <!-- Footer -->
-    <footer class="page-footer bg-dark text-white font-small blue">
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2022 Copyright:
-            <!-- <a href="https://mdbootstrap.com/"> MDBootstrap.com</a> -->
-        </div>
-    </footer>
-    <!-- Projects -->
-    <!-- add projects here -->
-    <!-- team -->
-    {% endblock%}
+<!-- Projects -->
+<!-- add projects here -->
+<!-- team -->
+<!-- subscribe -->
+<div class="container" id="bg-cont">
+  <div class="row">
+    <div class="col-md-6" id="email">
+<h3>Get Notified About New Designs</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+<div class="sub">
+  {% for message in get_flashed_messages() %}
+  <div class="alert alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+  </div>
+  {% endfor %}
+  <form class="form-inline" action="{{url_for('main.subscribe')}}" method="POST">
+    <div class="md-form form-group" id="emails">
+      <label class="white-color">Email Address...</label>
+      <input type="email" class="form-control " name="subscriber" required>
+    </div>
+    <div class="md-form form-group">
+      <button class="btn btn-sm btn-outline-info" id="subs">Subscribe</button>
+    </div>
+  </form>
+</div>
+    </div>
+    <div class="col-md-6" id="for-img">
+      <img src="{{url_for('static', filename='8.png')}}" />
+
+    </div>
+  </div>
+  </div>
+</div>
+{% endblock%}
+
