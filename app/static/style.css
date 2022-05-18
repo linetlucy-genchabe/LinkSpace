@@ -54,3 +54,29 @@
     font-size: 25px;
     margin-top: 10%;
 }
+#card-services{
+    border:  1px solid black; 
+
+}
+#card-services .fa{
+    font-size: 40px;
+    text-align: center;
+}
+#card-services{
+    padding: 10px 10px;
+    height: 20vh;
+}
+#services:hover{
+    transform: translateY(-10px);
+    /* transition: transfom.3s; */
+    /* background-color: #252b42; */
+    padding: 3px 3px;
+}
+.card-body h5{
+    font-size: 23px;
+    font-weight: bold;
+}
+.services h2{
+    font-size: 30px;
+    font-weight: bolder;
+}
