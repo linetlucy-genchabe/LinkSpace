@@ -1,12 +1,12 @@
-{% extends 'main/base.html'%}{% import 'bootstrap/wtf.html' as wtf%} {% from 'main/macros.html' import display%} {% block content %}
+{% extends 'main/base.html'%}{% import 'bootstrap/wtf.html' as wtf%}{% import 'main/macros.html' as macro %} {% from 'main/macros.html' import display%} {% from 'main/macros.html' import display_comments%}{% block content %}
 
 <body>
 
 
-    <div class="container" style="background-image: url('https://image.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28313.jpg'); margin-top: 10%;padding-top: 1%;padding-bottom: 3%; margin-bottom: 3%;">
+    <div class="container" style="background-image: url(/static/images/comment.jpeg);padding-bottom: 5%;padding-top: 4%;">
         <div class="row" style="margin-top: 2%;">
 
-            <div class="">{{display(posts)}}</div>
+            <div class="col-md-4">{{macro.display_comments(comments)}}</div>
 
 
 
