@@ -8,8 +8,109 @@
 <!-- Content block -->
 {% block content %}
 
-<div class="container-fluid m-5">
-  <h3>Welcome to flask code</h3>
+<div class="container-fluid m-5" id="bg-img">
 </div>
+<div class="container">
+  <div class="row" id="row">
+    <div class="col-md-6" id="col2">
+      <h3>About Us</h3>
+      <p>Linkspace is a web application for designers and developers. It allows them to upload their designs and get feedback from other users in the linkspace community.</p>
+      <div class="btns">
+        <a href="#about-header">
+          <button type="button" class="btn btn-danger btn-lg" id="">Join Us Today!</button>
+        </a>
+
+      </div>
+    </div>
+    <div class="col-md-6" id="col1">
+
+      <img src="{{url_for('static', filename='4.png')}}" />
+
+    </div>
+  </div>
+</div>
+<!-- SERVICESS -->
+<div class="container-lg" id="servic">
+  <div class="content">
+
+      <div class="services text-center">
+          <h2>Projects Types</h2>
+          <div class="border"></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur eaque expedita, possimus
+              repellat vero perspiciatis ea, deserunt suscipit incidunt eos praesentium sunt! Voluptas at placeat,
+              accusamus commodi in officia?</p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 mt-5" id="card-content">
+          <div class="col h-100" id="services">
+              <div class="card" id="card-services">
+                  <i class="fa fa-desktop" aria-hidden="true"></i>
+                  <div class="card-body">
+                      <h5 class="card-title">UX/UI Desing</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                          to additional content. This content is a little bit longer.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" id="services">
+              <div class="card" id="card-services">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  <div class="card-body">
+                      <h5 class="card-title">Web Development Desigs</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                          to additional content. This content is a little bit longer.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" id="services">
+              <div class="card" id="card-services">
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                  <div class="card-body">
+                      <h5 class="card-title">Copywright Desing</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                          to additional content. This content is a little bit longer.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" id="services">
+              <div class="card" id="card-services">
+                  <i class="fa fa-rocket" aria-hidden="true"></i>
+                  <div class="card-body">
+                      <h5 class="card-title">Graghic Desing</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                          to additional content. This content is a little bit longer.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" id="services">
+              <div class="card" id="card-services">
+                  <i class="fa fa-camera" aria-hidden="true"></i>
+                  <div class="card-body">
+                      <h5 class="card-title">Photography</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                          to additional content. This content is a little bit longer.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" id="services">
+              <div class="card" id="card-services">
+                <i class="fa fa-gamepad" aria-hidden="true"></i>
+                <div class="card-body">
+                      <h5 class="card-title">Game Designs</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                          to additional content. This content is a little bit longer.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+  </div>
+
+</div>
+<!-- Projects -->
+<!-- add projects here -->
+<!-- team -->
+
+
 
 {% endblock%}
