@@ -13,9 +13,13 @@
                 <h5 class="card-header text-center" id="title">{{post.title}}</h5>
                 <div class="card-body">
                     <p class="post"> {{post.content}}</p>
+                    </a>
 
-                    <footer class="blockquote-footer text-center"> Posted by: {{post.username}}</footer>
-                    <footer class="blockquote-footer text-center"> date posted: {{post.date_posted}}</footer>
+                    <button class="btn" style="background-color: rgb(38, 107, 235);"><i class=" far fa-comment-alt "></i><a href="/post/{{post.id}} " style="text-decoration: none;color: black; ">Comment</a> </button>
+                    </a>
+
+                    <footer class="blockquote-footer text-center "> Posted by: {{post.username}}</footer>
+                    <footer class="blockquote-footer text-center "> date posted: {{post.date_posted}}</footer>
 
                 </div>
             </div>
@@ -25,4 +29,20 @@
     </div>
 
 </div>
+{% endmacro %} {% macro display_comments(comments) %}
+<div class="container">
+</div>
+<div class="card-columns">
+    {% for comment in comments %}
+    <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <p>{{comment.comment}}</p>
+        </div>
+        <p class="text-center">{{comment.post_title}}</p>
+    </div>
+    {% endfor %}
+</div>
+
 {% endmacro %}
