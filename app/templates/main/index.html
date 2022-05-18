@@ -11,7 +11,7 @@
 
 {% block content %}
 
-<div class="container-fluid " id="bg-img" style="background-image: url(/static/images/background4.jpg);width: 100%;">
+<div class="container-fluid " id="bg-img" style="background-image: url(/static/images/comment.jpeg);width: 100%;">
 
 </div>
 <div class="container">
@@ -113,34 +113,32 @@
 <!-- team -->
 <!-- subscribe -->
 <div class="container" id="bg-cont">
-  <div class="row">
-    <div class="col-md-6" id="email">
-<h3>Get Notified About New Designs</h3>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-<div class="sub">
-  {% for message in get_flashed_messages() %}
-  <div class="alert alert-success">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    {{ message }}
-  </div>
-  {% endfor %}
-  <form class="form-inline" action="{{url_for('main.subscribe')}}" method="POST">
-    <div class="md-form form-group" id="emails">
-      <label class="white-color">Email Address...</label>
-      <input type="email" class="form-control " name="subscriber" required>
-    </div>
-    <div class="md-form form-group">
-      <button class="btn btn-sm btn-outline-info" id="subs">Subscribe</button>
-    </div>
-  </form>
-</div>
-    </div>
-    <div class="col-md-6" id="for-img">
-      <img src="{{url_for('static', filename='8.png')}}" />
+    <div class="row">
+        <div class="col-md-6" id="email">
+            <h3>Get Notified About New Designs</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <div class="sub">
+                {% for message in get_flashed_messages() %}
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button> {{ message }}
+                </div>
+                {% endfor %}
+                <form class="form-inline" action="{{url_for('main.subscribe')}}" method="POST">
+                    <div class="md-form form-group" id="emails">
+                        <label class="white-color">Email Address...</label>
+                        <input type="email" class="form-control " name="subscriber" required>
+                    </div>
+                    <div class="md-form form-group">
+                        <button class="btn btn-sm btn-outline-info" id="subs">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6" id="for-img">
+            <img src="{{url_for('static', filename='8.png')}}" />
 
+        </div>
     </div>
-  </div>
-  </div>
+</div>
 </div>
 {% endblock%}
-
