@@ -1,0 +1,23 @@
+#container
+{
+    margin-top: 10%;
+   
+    
+   
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#bg-img {
+    background-image: url("/static/2.png");
+}
+#bg-img{
+
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
