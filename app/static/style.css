@@ -81,3 +81,23 @@
     font-size: 30px;
     font-weight: bolder;
 }
+#for-img img{
+width: 100%;
+}
+#for-img{
+    /* background-color: rgb(119, 109, 229); */
+}
+#email{
+    flex-basis: 50%;
+    margin: auto;
+}
+#email h3{
+    font-size: 26px;
+    font-weight: bolder;
+}
+#email p{
+    font-size: 18px;
+}
+#subs{
+    font-size: 18px;
+}
