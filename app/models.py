@@ -108,7 +108,7 @@ class Subscribers(db.Model):
     email = db.Column(db.String(255), unique = True, index = True)
 
     def save_subscriber(self):
-        db.session.delete(self)
+        db.session.add(self)
         db.session.commit()
 
     def __repr__(self):

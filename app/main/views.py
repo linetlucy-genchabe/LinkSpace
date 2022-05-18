@@ -52,6 +52,7 @@ def post(id):
 @main.route("/post/new", methods = ["POST", "GET"])
 @login_required
 def new_post():
+    subscribers = Subscribers.query.all()
 
     post_form = PostForm()
     if post_form.validate_on_submit():
@@ -71,9 +72,8 @@ def new_post():
         new_post = Post(title = post_title, content = post_content,user_id=current_user._get_current_object().id,image_file=path)
         new_post.save_post()
         subs = Subscribers.query.all()
-        for sub in subs:
-            mail_message(post_title, "email/subscribers", sub.email, new_post = new_post)
-            pass
+        for subscriber in subscribers:
+            mail_message("New Blog Post","email/welcome_user",subscriber.email,new_post=new_post)
         return redirect(url_for("main.index", id = new_post.id))
     
     return render_template("main/new_post.html",post_form = post_form)
@@ -135,8 +135,8 @@ def comment(blog_id):
 @main.route('/subscribe',methods = ['POST','GET'])
 def subscribe():
     email = request.form.get('subscriber')
-    new_sub = Subscribers(email = email)
-    new_sub.save_subscriber()
-    welcome_message("Subscribed to LinkSpace","email/welcome",new_sub.email,new_sub=new_sub)
+    new_subscriber = Subscribers(email = email)
+    new_subscriber.save_subscriber()
+    mail_message("Subscribed to LinkSpace","email/welcome_user",new_subscriber.email,new_subscriber=new_subscriber)
     flash('Sucessfuly subscribed')
     return redirect(url_for('main.index'))
