@@ -4,6 +4,7 @@
     <a href="/post/new"><button class="btn" style="color:rgb(255, 255, 255);">New Post</button></a>
     <div class="row">
         {% if posts %} {% for post in posts %}
+
         <div class="col-md-4" id="cardss">
             <div class="card h-100" id="carded">
                     <img src="{{url_for('static',filename=post.image_file)}}" class="card-img-top" alt="..." />
@@ -15,9 +16,26 @@
                         <small class="text-muted">Posted by: {{post.username}} Date posted: {{post.date_posted}}</small>
                       </div>
                    
+
             </div>
         </div>
         {% endfor%}{%endif%}
     </div>
 </div>
+{% endmacro %} {% macro display_comments(comments) %}
+<div class="container">
+</div>
+<div class="card-columns">
+    {% for comment in comments %}
+    <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <p>{{comment.comment}}</p>
+        </div>
+        <p class="text-center">{{comment.post_title}}</p>
+    </div>
+    {% endfor %}
+</div>
+
 {% endmacro %}

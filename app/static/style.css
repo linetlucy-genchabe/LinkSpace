@@ -1,19 +1,16 @@
-#container
-{
+#container {
     margin-top: 10%;
-   
-    
-   
 }
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 #bg-img {
-    background-image: url("/static/2.png");
-}
-#bg-img{
+    background-image: url("/static/5.png");
+
 
     height: 90vh;
     background-position: center;
@@ -21,13 +18,16 @@
     background-size: cover;
     position: relative;
 }
-#row{
+
+#row {
     padding-top: 100px;
     flex-basis: 50%;
     margin: auto;
 }
-#col1 img{
+
+#col1 img {
     width: 100%;
+
  }
  #col2{
      /* flex-basis: 50%; */
@@ -51,33 +51,39 @@
  color: rgb(0, 0, 0);
  }
  #col2 p{
+
     font-size: 25px;
     margin-top: 10%;
 }
-#card-services{
-    border:  1px solid black; 
 
+#card-services {
+    border: 1px solid black;
 }
-#card-services .fa{
+
+#card-services .fa {
     font-size: 40px;
     text-align: center;
     color: blueviolet;
 }
-#card-services{
+
+#card-services {
     padding: 10px 10px;
-    height: 20vh;
+    height: 40vh;
 }
-#services:hover{
+
+#services:hover {
     transform: translateY(-10px);
     /* transition: transfom.3s; */
     /* background-color: #252b42; */
     padding: 3px 3px;
 }
-.card-body h5{
+
+.card-body h5 {
     font-size: 23px;
     font-weight: bold;
 }
-.services h2{
+
+.services h2 {
     font-size: 30px;
     font-weight: bolder;
 }
