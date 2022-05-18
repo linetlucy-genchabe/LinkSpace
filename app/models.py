@@ -50,6 +50,8 @@ class Post(db.Model):
     title = db.Column(db.String(100), nullable=False)
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     content = db.Column(db.Text, nullable=False)
+    comment = db.relationship('Comment', backref='post', lazy='dynamic')
+    up_vote = db.relationship('Upvote', backref='post', lazy='dynamic')
     image_file = db.Column(db.String(), nullable=False )
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
@@ -113,11 +115,31 @@ class Subscribers(db.Model):
 
     def __repr__(self):
         return f"Subscribers {self.email}"
+class Upvote(db.Model):
+    __tablename__ = 'upvotes'
+    id = db.Column(db.Integer, primary_key=True)
+    upvote = db.Column(db.Integer, default=1)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
 
-class PostLike(db.Model):
-    __tablename__ = "post_like"
-    id = db.Column(db.Integer, primary_key = True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    post_id = db.Column(db.Integer, db.ForeignKey("posts.id"))
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
 
+    def upvote(cls, id):
+        upvote_post = Upvote(user=current_user, post_id=id)
+        upvote_post.save()
+
+    @classmethod
+    def query_upvotes(cls, id):
+        upvote = Upvote.query.filter_by(post_id=id).all()
+        return upvote
+
+    @classmethod
+    def all_upvotes(cls):
+        upvotes = Upvote.query.order_by('id').all()
+        return upvotes
+
+    def __repr__(self):
+        return f'{self.user_id}:{self.post_id}'
 

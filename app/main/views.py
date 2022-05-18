@@ -1,7 +1,7 @@
 from email.mime import image
 from . import main
 from flask import render_template,request,redirect,url_for,abort,flash
-from ..models import  User,Comment,Post,Subscribers
+from ..models import  User,Comment,Post,Subscribers,Upvote
 from .forms import UpdateProfile,PostForm,CommentForm
 from .. import db,photos
 from flask_login import login_required,current_user
@@ -140,3 +140,12 @@ def subscribe():
     mail_message("Subscribed to LinkSpace","email/welcome_user",new_subscriber.email,new_subscriber=new_subscriber)
     flash('Sucessfuly subscribed')
     return redirect(url_for('main.index'))
+
+
+@main.route('/like/<int:id>', methods=['POST', 'GET'])
+@login_required
+def upvote(id):
+    post = Post.query.get(id)
+    vote_mpya = Upvote(post=post, upvote=1)
+    vote_mpya.save()
+    return redirect(url_for('main.index',id = post.id))
