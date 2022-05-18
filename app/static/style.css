@@ -21,3 +21,36 @@
     background-size: cover;
     position: relative;
 }
+#row{
+    padding-top: 100px;
+    flex-basis: 50%;
+    margin: auto;
+}
+#col1 img{
+    width: 100%;
+ }
+ #col2{
+     /* flex-basis: 50%; */
+     margin: auto;
+     padding-right: 40px;
+     padding: 10px;
+ 
+ }
+ #col2 h3{
+     font-size: 50px;
+     font-weight: bolder;
+ }
+ .btns .btn{
+     background-color: rgb(85, 85, 220);
+     color: white;
+     font-weight: bolder;
+     margin-top: 10%;
+ }
+ .btns .btn:hover{
+ background-color: aliceblue;
+ color: rgb(0, 0, 0);
+ }
+ #col2 p{
+    font-size: 25px;
+    margin-top: 10%;
+}

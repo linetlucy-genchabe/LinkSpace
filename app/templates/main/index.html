@@ -11,15 +11,19 @@
 <div class="container-fluid m-5" id="bg-img">
 </div>
 <div class="container">
-  <div class="row">
-    <div class="col-md-6">
+  <div class="row" id="row">
+    <div class="col-md-6" id="col2">
       <h3>About Us</h3>
       <p>Linkspace is a web application for designers and developers. It allows them to upload their designs and get feedback from other users in the linkspace community.</p>
-      <a href="#about-header">
-        <button type="button" class="btn btn-danger btn-lg">Join Us Today!</button>
-      </a>
+      <div class="btns">
+        <a href="#about-header">
+          <button type="button" class="btn btn-danger btn-lg" id="">Join Us Today!</button>
+        </a>
+
+      </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" id="col1">
+
       <img src="{{url_for('static', filename='4.png')}}" />
 
     </div>
