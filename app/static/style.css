@@ -44,7 +44,7 @@
      background-color: rgb(85, 85, 220);
      color: white;
      font-weight: bolder;
-     margin-top: 10%;
+     margin-top: 5%;
  }
  .btns .btn:hover{
  background-color: aliceblue;
@@ -104,4 +104,11 @@ width: 100%;
 #carded img{
     width: 100%;
     background-color: black;
+}
+#textcard p{
+    font-size: 22px;
+}
+#for-footer small{
+    font-size: 15px;
+    font-weight: 600;
 }

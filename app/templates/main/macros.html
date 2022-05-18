@@ -5,14 +5,16 @@
     <div class="row">
         {% if posts %} {% for post in posts %}
         <div class="col-md-4" id="cardss">
-            <div class="thumbnail" id="carded">
+            <div class="card h-100" id="carded">
                     <img src="{{url_for('static',filename=post.image_file)}}" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-header text-center" id="title">{{post.title}}</h5>
-                    <p class="post"> {{post.content}}</p>
-                    <footer class="blockquote-footer text-center"> Posted by: {{post.username}}</footer>
-                    <footer class="blockquote-footer text-center"> date posted: {{post.date_posted}}</footer>
-                </div>
+                    <div class="card-body" id="textcard" >
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <p class="card-text">{{post.content}}</p>
+                      </div>
+                    <div class="card-footer" id="for-footer">
+                        <small class="text-muted">Posted by: {{post.username}} Date posted: {{post.date_posted}}</small>
+                      </div>
+                   
             </div>
         </div>
         {% endfor%}{%endif%}
