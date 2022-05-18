@@ -101,3 +101,7 @@ width: 100%;
 #subs{
     font-size: 18px;
 }
+#carded img{
+    width: 100%;
+    background-color: black;
+}
