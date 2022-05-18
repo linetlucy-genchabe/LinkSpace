@@ -33,11 +33,11 @@
      /* flex-basis: 50%; */
      margin: auto;
      padding-right: 40px;
-     padding: 10px;
+     /* padding: 5px 10px; */
  
  }
  #col2 h3{
-     font-size: 50px;
+     font-size: 44px;
      font-weight: bolder;
  }
  .btns .btn{
@@ -53,7 +53,7 @@
  #col2 p{
 
     font-size: 25px;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 #card-services {
@@ -117,4 +117,25 @@ width: 100%;
 #for-footer small{
     font-size: 15px;
     font-weight: 600;
+}
+#logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+.navbar{
+    background-color: #d1befc;
+}
+#home{
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+}
+#auth{
+    font-size: 22px;
+    font-weight: bold;
+}
+#auth:hover{
+
+    background-color: #5014dc;
+    color: rgb(250, 249, 249);
 }
