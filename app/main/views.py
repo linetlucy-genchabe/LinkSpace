@@ -1,11 +1,15 @@
+from email.mime import image
 from . import main
 from flask import render_template,request,redirect,url_for,abort,flash
 from ..models import  User,Comment,Post,Subscribers
 from .forms import UpdateProfile,PostForm,CommentForm
 from .. import db,photos
 from flask_login import login_required,current_user
-from ..email import welcome_message, notification_message
+from ..email import mail_message,welcome_message
 from datetime import datetime
+
+
+
 
 
 
@@ -19,11 +23,13 @@ def index():
         db.session.add(new_sub)
         db.session.commit()
         welcome_message("Thank you for subscribing to lynne blog", "email/welcome", new_sub.email)
-    return render_template("index.html",posts = posts)
+    return render_template("main/index.html",posts = posts)
 
 @main.route("/post/<int:id>", methods = ["POST", "GET"])
 def post(id):
     post = Post.query.filter_by(id = id).first()
+  
+    
     comments = Comment.query.filter_by(post_id = id).all()
     comment_form = CommentForm()
     comment_count = len(comments)
@@ -39,7 +45,7 @@ def post(id):
         new_comment.save_comment()
         return redirect(url_for("main.post", id = post.id))
 
-    return render_template("post.html", post = post,comments = comments,comment_form = comment_form,comment_count = comment_count)
+    return render_template("main/post.html", post = post,comments = comments,comment_form = comment_form,comment_count = comment_count)
 
 
 
@@ -51,18 +57,28 @@ def new_post():
     if post_form.validate_on_submit():
         post_title = post_form.title.data
         post_form.title.data = ""
+
+        filename = photos.save(post_form.image_file.data)
+        path = f'photos/{filename}'
+
+
         post_content = post_form.content.data
         post_form.content.data = ""
         user_id = current_user._get_current_object().id
-        new_post = Post(title = post_title, content = post_content,user_id=current_user._get_current_object().id)
+
+       
+
+        new_post = Post(title = post_title, content = post_content,user_id=current_user._get_current_object().id,image_file=path)
         new_post.save_post()
         subs = Subscribers.query.all()
         for sub in subs:
-            notification_message(post_title, "email/subscribers", sub.email, new_post = new_post)
+            mail_message(post_title, "email/subscribers", sub.email, new_post = new_post)
             pass
-        return redirect(url_for("main.post", id = new_post.id))
+        return redirect(url_for("main.index", id = new_post.id))
     
-    return render_template("new_post.html",post_form = post_form)
+    return render_template("main/new_post.html",post_form = post_form)
+
+
 
 
 @main.route('/user/<uname>')
@@ -121,6 +137,6 @@ def subscribe():
     email = request.form.get('subscriber')
     new_sub = Subscribers(email = email)
     new_sub.save_subscriber()
-    notification_message("Subscribed to LinkSpace","email/welcome",new_sub.email,new_sub=new_sub)
+    welcome_message("Subscribed to LinkSpace","email/welcome",new_sub.email,new_sub=new_sub)
     flash('Sucessfuly subscribed')
     return redirect(url_for('main.index'))
