@@ -1,15 +1,24 @@
-{% extends 'main/base.html'%}
+{% extends 'main/base.html'%}{% import 'main/macros.html' as macro %}
 
 <!-- Styles block -->
 
 {% block styles%} {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}" />
-{% endblock %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}" /> {% endblock %}
+
 <!-- Content block -->
+
+
+
 {% block content %}
 
-<div class="container-fluid m-5">
-  <h3>Welcome to flask code</h3>
+<div class="container">
+    <h1>WELCOME TO LINKSPACE</h1>
 </div>
+
+<div class="display">{{macro.display(posts)}}</div>
+
+
+
+
 
 {% endblock%}

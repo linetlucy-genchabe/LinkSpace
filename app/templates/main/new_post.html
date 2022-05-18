@@ -1,0 +1,17 @@
+{% extends 'main/base.html'%} {% import 'bootstrap/wtf.html' as wtf %} {% block content %}
+
+<body>
+
+    <div class="container" style="background-image: url('https://image.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28313.jpg'); margin-top: 8%;padding-top: 3%;padding-bottom: 3%; margin-bottom: 3%;">
+        <div class="row col-md-12" style="margin-top: 6%;padding-top: 5%;padding-bottom: 5%;width: 50%;border-radius: 20px;margin-left: 25%;background-color: white;">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">{{wtf.quick_form(post_form)}}</div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+
+</body>
+
+
+{% endblock%}

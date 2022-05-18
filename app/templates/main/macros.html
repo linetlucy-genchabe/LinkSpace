@@ -1,0 +1,28 @@
+ {% macro display(posts) %}
+<div class="container">
+    <h1 class="">POSTS</h1>
+    <a href="/post/new"><button class="btn" style="color:black;">New Post</button></a>
+
+    <div class="row">
+        {% if posts %} {% for post in posts %}
+        <div class="col-md-4">
+            <div class="thumbnail" id="carded">
+
+                <img src="{{url_for('static',filename=post.image_file)}}" class="card-img-top" alt="..." style="height: 40%;width: 40%;" />
+
+                <h5 class="card-header text-center" id="title">{{post.title}}</h5>
+                <div class="card-body">
+                    <p class="post"> {{post.content}}</p>
+
+                    <footer class="blockquote-footer text-center"> Posted by: {{post.username}}</footer>
+                    <footer class="blockquote-footer text-center"> date posted: {{post.date_posted}}</footer>
+
+                </div>
+            </div>
+
+        </div>
+        {% endfor%}{%endif%}
+    </div>
+
+</div>
+{% endmacro %}
