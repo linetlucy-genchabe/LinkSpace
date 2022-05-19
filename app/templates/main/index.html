@@ -12,23 +12,22 @@
 {% block content %}
 
 
-<div class="container-fluid " id="bg-img" style="background-image: url(/static/images/background3.jpg);width: 100%;">
+<div class="container-fluid " id="bg-img" >
 
 
 
 </div>
 <div class="container">
     <div class="row" id="row">
-        <h3 style="font-family: pacifico;font-weight: bolder;font-size: 60px;text-align: center;"><b>ABOUT US</b></h3>
+        <h3 style="font-family: pacifico;font-weight: bolder;font-size: 45px;text-align: center;"><b>ABOUT US</b></h3>
         <div class="col-md-6" id="col2">
 
-            <p>Linkspace is a web application for designers and developers. It allows them to upload their designs and get feedback from other users in the linkspace community.</p>
+            <p>Feedback is a very powerful tool and is at the heart of effective design. Through Linkspace, find like-minded professionals to give you feedback on your designs. </p>
             <div class="btns">
                 <a href="#about-header">
                     <button type="button" class="btn btn-lg" id="" style="background-color: darkcyan;">Join Us Today!</button>
                 </a>
 
-                <div class="display">{{macro.display(posts)}}</div>
 
 
 
@@ -42,12 +41,15 @@
     </div>
 </div>
 <!-- SERVICESS -->
+
+
 <div class="container mt-5" id="servic">
     <div class="content">
 
         <div class="services text-center">
 
-            <h3 style="font-family: pacifico;font-weight: bolder;font-size: 60px;text-align: center;"><b>PROJECT TYPES</b></h3>
+            <h3 style="font-family: pacifico;font-weight: bolder;font-size: 45px;text-align: center;"><b>PROJECT TYPES</b></h3>
+            <p style="font-size: 18px;">Designs, illustrations, and graphic elements inspired by the world's best designers. View our Projects</p>
             <div class="border"></div>
 
         </div>
@@ -56,7 +58,7 @@
                 <div class="card" id="card-services">
                     <i class="fa fa-desktop" aria-hidden="true"></i>
                     <div class="card-body">
-                        <h5 class="card-title">UX/UI Desing</h5>
+                        <h5 class="card-title">UX/UI Design</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
@@ -114,14 +116,18 @@
 </div>
 
 <!-- Projects -->
+<div class="container">
+    <div class="display">{{macro.display(posts)}}</div>
+
+</div>
 <!-- add projects here -->
 <!-- team -->
 <!-- subscribe -->
 <div class="container" id="bg-cont">
     <div class="row">
-        <h3 style="font-family: pacifico;font-weight: bolder;font-size: 60px;text-align: center;margin-top: 4%;"><b>SUBSCRIBE</b></h3>
+        <h3 style="font-family: pacifico;font-weight: bolder;font-size: 45px;text-align: center;margin-top: 4%;"><b>SUBSCRIBE</b></h3>
         <div class="col-md-6" id="email">
-            <h3>Get Notified About New Designs</h3>
+            <h3>Subscribe to our Newsletter</h3>
 
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             <div class="sub">

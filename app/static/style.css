@@ -56,14 +56,12 @@
     margin-top: 5%;
 }
 
-#card-services {
-    border: 2px solid rgb(99, 104, 233);
-}
+
 
 #card-services .fa {
     font-size: 40px;
     text-align: center;
-    color: blueviolet;
+    color: rgb(0, 0, 0);
 }
 
 #card-services {
@@ -196,6 +194,6 @@ width: 100%;
     color: rgb(79, 79, 236);
 }
 .page-footer{
-    background-color: #5014dc;
+    background-color: #000000;
     color: white;
 }
