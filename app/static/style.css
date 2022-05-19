@@ -9,10 +9,9 @@
 }
 
 #bg-img {
-    background-image: url("/static/5.png");
-}
+    background-image: url("/static/17.jpg");
 
-#bg-img {
+
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,15 +33,15 @@
      /* flex-basis: 50%; */
      margin: auto;
      padding-right: 40px;
-     padding: 10px;
+     /* padding: 5px 10px; */
  
  }
  #col2 h3{
-     font-size: 50px;
+     font-size: 44px;
      font-weight: bolder;
  }
  .btns .btn{
-     background-color: rgb(85, 85, 220);
+     background-color: rgb(113, 113, 220);
      color: white;
      font-weight: bolder;
      margin-top: 5%;
@@ -54,11 +53,11 @@
  #col2 p{
 
     font-size: 25px;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 #card-services {
-    border: 1px solid black;
+    border: 2px solid rgb(99, 104, 233);
 }
 
 #card-services .fa {
@@ -69,7 +68,7 @@
 
 #card-services {
     padding: 10px 10px;
-    height: 40vh;
+    height: 25vh;
 }
 
 #services:hover {
@@ -118,4 +117,85 @@ width: 100%;
 #for-footer small{
     font-size: 15px;
     font-weight: 600;
+}
+#logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.navbar{
+    background-color: #ffffff;
+    margin-bottom: 0%;
+    /* color: rgb(255, 255, 255); */
+}
+#home{
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+#auth{
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+#auth:hover{
+
+    background-color: #5014dc;
+    color: rgb(250, 249, 249);
+}
+/* * contact section */ 
+.contact {
+    /* background-color: black; */
+}
+
+#for-contact {
+    display: flex;
+    padding-top: 80px;
+    justify-content: space-around;
+}
+
+.contact-container {
+    color: rgb(0, 0, 0);
+
+}
+
+.contact-container h4 {
+    font-size: 17px;
+    font-weight: lighter;
+    padding: 10px;
+    text-align: start;
+
+}
+
+.contact-container h2 {
+    color: #796cee;
+    font-weight: bolder;
+}
+
+.container-opening {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.container-opening h5 {
+
+    font-size: 17px;
+    font-weight: lighter;
+    padding: 10px;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+.icons .fa{
+   margin-top: 15px;
+    line-height: 20px;
+    font-size: 20px;
+    color: rgb(79, 79, 236);
+}
+.page-footer{
+    background-color: #5014dc;
+    color: white;
 }
