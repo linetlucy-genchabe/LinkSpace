@@ -11,18 +11,21 @@
 
 {% block content %}
 
-<div class="container-fluid " id="bg-img">
- <!-- style="background-image: url(/static/images/comment.jpeg);width: 100%;"> -->
+
+<div class="container-fluid " id="bg-img" style="background-image: url(/static/images/background3.jpg);width: 100%;">
+
+
 
 </div>
 <div class="container">
     <div class="row" id="row">
+        <h3 style="font-family: pacifico;font-weight: bolder;font-size: 60px;text-align: center;"><b>ABOUT US</b></h3>
         <div class="col-md-6" id="col2">
-            <h3>About Us</h3>
+
             <p>Linkspace is a web application for designers and developers. It allows them to upload their designs and get feedback from other users in the linkspace community.</p>
             <div class="btns">
                 <a href="#about-header">
-                    <button type="button" class="btn btn-lg" id="">Join Us Today!</button>
+                    <button type="button" class="btn btn-lg" id="" style="background-color: darkcyan;">Join Us Today!</button>
                 </a>
 
                 <div class="display">{{macro.display(posts)}}</div>
@@ -33,7 +36,7 @@
         </div>
         <div class="col-md-6" id="col1">
 
-            <img src="{{url_for('static', filename='4.png')}}" />
+            <img src="{{url_for('static', filename='images/aboutus1.png')}}" />
 
         </div>
     </div>
@@ -43,9 +46,10 @@
     <div class="content">
 
         <div class="services text-center">
-            <h2>Projects Types</h2>
+
+            <h3 style="font-family: pacifico;font-weight: bolder;font-size: 60px;text-align: center;"><b>PROJECT TYPES</b></h3>
             <div class="border"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur eaque expedita, possimus repellat vero perspiciatis ea, deserunt suscipit incidunt eos praesentium sunt! Voluptas at placeat, accusamus commodi in officia?</p>
+
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-4 mt-5" id="card-content">
             <div class="col h-100" id="services">
@@ -115,8 +119,10 @@
 <!-- subscribe -->
 <div class="container" id="bg-cont">
     <div class="row">
+        <h3 style="font-family: pacifico;font-weight: bolder;font-size: 60px;text-align: center;margin-top: 4%;"><b>SUBSCRIBE</b></h3>
         <div class="col-md-6" id="email">
             <h3>Get Notified About New Designs</h3>
+
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             <div class="sub">
                 {% for message in get_flashed_messages() %}
