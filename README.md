@@ -11,7 +11,7 @@ Basic flask application starter files
 ```
 Landing Page
 ```
-<img src="./app/static/home.png">
+<img src="./app/static/19.png">
 
 ### Running the Application
 
