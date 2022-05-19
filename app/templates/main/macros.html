@@ -1,7 +1,7 @@
 {% macro display(posts) %}
 <div class="container mt-5">
-    <h1 class="">POSTS</h1>
-    <a href="/post/new"><button class="btn" style="color:rgb(255, 255, 255);">New Post</button></a>
+    <h1 class="" style="font-family: pacifico;font-weight: bolder;font-size: 60px;text-align: center;"><b>POSTS</b></h1>
+    <a href="/post/new"><button class="btn" style="background-color: darkcyan;">New Post</button></a>
     <div class="row">
         {% if posts %} {% for post in posts %}
 
@@ -13,8 +13,8 @@
                     <p class="card-text">{{post.content}}</p>
                     <div>
 
-                        <a href="/post/{{post.id}}"><button class="btn btn-info"> {{post.comment.count()}}  Comments  </button></a>
-                        <a href="/like/{{post.id}}"><button class="btn btn-success"> {{post.up_vote.count()}}  Likes </button></a>
+                        <a href="/post/{{post.id}}"><button class="btn btn-info" style="background-color: darkcyan;"> {{post.comment.count()}}  Comments  </button></a>
+                        <a href="/like/{{post.id}}"><button class="btn btn-success" style="background-color: darkcyan;"> {{post.up_vote.count()}}  Likes </button></a>
                         <h1>{{upvotes}}</h1>
                     </div>
 
