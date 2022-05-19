@@ -28,13 +28,14 @@ class Config:
 #     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://'
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+     SQLALCHEMY_DATABASE_URI = 'postgresql://zxysbevgknkfxa:128aaa91c3588ef2a9b8c0d9227059c612553bf829bf9cfdcd7664c42da3d673@ec2-54-165-90-230.compute-1.amazonaws.com:5432/ddah81vmv0gm3'
 
-    pass
+   
 
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Mbuguack@localhost/linkspacedb'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://zxysbevgknkfxa:128aaa91c3588ef2a9b8c0d9227059c612553bf829bf9cfdcd7664c42da3d673@ec2-54-165-90-230.compute-1.amazonaws.com:5432/ddah81vmv0gm3'
+
     DEBUG = True
 
 config_options = {
