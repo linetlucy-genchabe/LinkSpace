@@ -9,10 +9,10 @@
 }
 
 #bg-img {
-    background-image: url("/static/2.png");
+    background-image: url("/static/17.jpg");
 
 
-    height: 90vh;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,18 +121,23 @@ width: 100%;
 #logo{
     font-size: 30px;
     font-weight: bold;
+    color: rgb(0, 0, 0);
 }
 .navbar{
-    background-color: #d1befc;
+    background-color: #ffffff;
+    margin-bottom: 0%;
+    /* color: rgb(255, 255, 255); */
 }
 #home{
     font-size: 22px;
     font-weight: bold;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 #auth{
     font-size: 22px;
     font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 #auth:hover{
 
