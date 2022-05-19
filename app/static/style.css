@@ -131,11 +131,16 @@ width: 100%;
     font-weight: bold;
     color: rgb(0, 0, 0);
 }
-#auth{
+#auth a{ 
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.auth{ 
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
 }
 #auth:hover{
 
@@ -146,7 +151,9 @@ width: 100%;
 .contact {
     /* background-color: black; */
 }
-
+#contacts{
+    background-color: #3f3c44;
+}
 #for-contact {
     display: flex;
     padding-top: 80px;
@@ -154,7 +161,7 @@ width: 100%;
 }
 
 .contact-container {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 
 }
 
@@ -172,7 +179,7 @@ width: 100%;
 }
 
 .container-opening {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -190,10 +197,39 @@ width: 100%;
 .icons .fa{
    margin-top: 15px;
     line-height: 20px;
-    font-size: 20px;
-    color: rgb(79, 79, 236);
+    font-size: 29px;
+
 }
 .page-footer{
     background-color: #000000;
     color: white;
 }
+@media screen and (max-width: 756px){
+    .container-opening h2{
+        font-size: 20px;
+    }
+    .container-opening h5{
+        font-size: 17px;
+    }
+    .contact-container{
+        font-size: 20px;
+
+    }
+}
+@media screen and (max-width: 432px){
+    .container-opening{
+        width: 100%;
+    }
+    .contact-container{
+        font-size: 17px;
+
+    }
+    .container-opening h2{
+        font-size: 17px;
+    }
+    .container-opening h5{
+        font-size: 13px;
+    }
+}
+
+
