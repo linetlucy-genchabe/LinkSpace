@@ -148,11 +148,9 @@ width: 100%;
     color: rgb(250, 249, 249);
 }
 /* * contact section */ 
-.contact {
-    /* background-color: black; */
-}
+
 #contacts{
-    background-color: #3f3c44;
+    background-color: #080925;
 }
 #for-contact {
     display: flex;
@@ -174,7 +172,7 @@ width: 100%;
 }
 
 .contact-container h2 {
-    color: #796cee;
+    color: #ffffff;
     font-weight: bolder;
 }
 
