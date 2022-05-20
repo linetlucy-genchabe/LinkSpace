@@ -7,11 +7,12 @@
   </button>
     <div class="collapse navbar-collapse ms-auto" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" id="home" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
+          
             <li class="nav-item">
-                <a class="nav-link"id="home" href="{{url_for('main.index')}}">Designs</a>
+                <a class="nav-link"id="home" href="{{url_for('main.index')}}">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" id="home" href="/post/new"> New Design<span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <div>
